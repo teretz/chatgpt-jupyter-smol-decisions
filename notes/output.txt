@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+hi its me, the smol developer! you said you wanted:
+[92ma Chrome extension that, when clicked, opens a small window with a page where you can enter a prompt for reading the currently open page and generating some response from openai[0m
+  File "/pkg/modal/_container_entrypoint.py", line 330, in handle_input_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 403, in call_function_sync
+    res = fun(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/root/main.py", line 35, in generate_response
+    openai.api_key = os.environ["OPENAI_API_KEY"]
+                     ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 678, in __getitem__
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/pkg/modal/_container_entrypoint.py", line 330, in handle_input_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 403, in call_function_sync
+    res = fun(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/root/main.py", line 35, in generate_response
+    openai.api_key = os.environ["OPENAI_API_KEY"]
+                     ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 678, in __getitem__
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/pkg/modal/_container_entrypoint.py", line 330, in handle_input_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 403, in call_function_sync
+    res = fun(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/root/main.py", line 35, in generate_response
+    openai.api_key = os.environ["OPENAI_API_KEY"]
+                     ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 678, in __getitem__
+KeyError: 'OPENAI_API_KEY'
+Traceback (most recent call last):
+  File "/pkg/modal/_container_entrypoint.py", line 330, in handle_input_exception
+    yield
+  File "/pkg/modal/_container_entrypoint.py", line 403, in call_function_sync
+    res = fun(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/root/main.py", line 35, in generate_response
+    openai.api_key = os.environ["OPENAI_API_KEY"]
+                     ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 678, in __getitem__
+KeyError: 'OPENAI_API_KEY'

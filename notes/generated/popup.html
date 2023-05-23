@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OpenAI Response Generator</title>
+    <script src="popup.js"></script>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>OpenAI Response Generator</h1>
+      <form>
+        <label for="prompt-input">Enter your prompt:</label>
+        <input type="text" id="prompt-input" name="prompt-input"><br><br>
+        <button type="button" onclick="generateResponse()">Generate Response</button>
+      </form>
+      <div id="response-output"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+//filename : ./jupyter-chatgpt/md-parse-helper.js
+// Require necessary modules
+const express = require('express');
+const multer = require('multer');
+const child_process = require('child_process');
+
+const upload = multer({ dest: 'uploads/' });
+
+// Set up Express app
+const app = express();
+
+// Handle file upload
+app.post('/upload', upload.single('file'), (req, res) => {
+  // The file has been uploaded and is available at req.file.path
+  console.log(`File uploaded: ${req.file.path}`);
+
+  // Execute the curl command as a child process
+  child_process.exec(`curl -X POST -F "file=@./${req.file.path}" http://localhost:2998/process-markdown`, (error, stdout, stderr) => {
+    if (error) {
+      console.log(`Error executing command: ${error}`);
+      return;
+    }
+
+    // Print the output of the command
+    console.log(stdout);
+
+    // If there was any error output, print that as well
+    if (stderr) {
+      console.log(`Command stderr: ${stderr}`);
+    }
+  });
+
+  res.send('File uploaded and processed');
+});
+
+app.listen(2998, () => {
+  console.log('Server running on http://localhost:2998');
+});
